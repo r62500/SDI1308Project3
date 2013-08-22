@@ -13,18 +13,25 @@ var catActivities = [" eating", " sleeping", " scratching the scratching post", 
 var litterbox = {
 	"litter":   {
 		brand:        "\"Fresh Step\"",
-		amountPerBox: "14 Pounds",
-		price:        "10 Dollars"
+		poundsPerBox: 14,
+		priceDollars: 10,
+		//Method: Function
+		getPricePerPound: function () {
+			var dollarsPerPound;
+			dollarsPerPound = litterbox.litter.priceDollars / litterbox.litter.poundsPerBox;
+			return litterprice = parseFloat(dollarsPerPound).toFixed(2);
+		}
 	},
 	"currentStatus": "clean",
 	//Method: Accessor
 	"checkStatus": function () {
 		console.log("The litterbox is currently " + litterbox.currentStatus + ".");
 	},
-	//Method: Mutators
+	//Method: Mutator
 	"useLitterbox": function () {
 		litterbox.currentStatus = "dirty"
 	},
+	//Method: Mutator: This method is to use the "Procedure Method"
 	"cleanLitterbox": function () {
 		litterbox.currentStatus = "clean"
 	}
@@ -82,18 +89,23 @@ var exercise = function (energyLevel, thingsToDo) {
 };
 
 // Flow Chart - Predefined Process: Function
-var scratch = function (objectToScratch, isInTheHouse, isAsleep, numberOfEnergy) {
+var scratch = function (objectToScratch, isInTheHouse, isAsleep, numberOfEnergy, numberOfInterruptions) {
 	var item = objectToScratch;
 		attack = 1;
 		isWithinRange = isInTheHouse;
 		sleeping = isAsleep;
 		interest = numberOfEnergy;
+		interrupt = numberOfInterruptions;
 		if (isWithinRange === true) {
 			if (sleeping != true) {
 				while (interest > 0) {
 				console.log("Chachi scratches at the " + item.name + " for five seconds.");
 				interest = interest - attack;
 				}
+					while (interrupt > 0) {
+					console.log("Chachi hears a noise and stops to look around for 2 seconds.");
+					interrupt = interrupt - attack;
+					}
 				return sharpClaws = {
 					frontClaws: "sharp",
 					backClaws: "dull"
@@ -114,6 +126,7 @@ var lowEnergyActivities;
 var sharpClaws;
 var tired;
 var notTired;
+var litterprice;
 
 // Flow Chart - Main code: Outputs
 
@@ -154,13 +167,17 @@ console.log("Annoyed at the situation " + characterData.characters[1].characterN
 // Flow Chart - Method: Mutator
 litterbox.cleanLitterbox();
 
+// Flow Chart - Method: Function
+litterbox.litter.getPricePerPound();
+console.log(litterbox.litter.brand + " litter costs " + litterprice + " dollars per pound so it should be conserved if possible.");
+
 // Flow Chart - Predefined Process: Array Function
 exercise(catMotivation, catActivities);
 console.log("Since my cat used all of her motivation she resumes her mellow activities such as" + lowEnergyActivities + ".");
 console.log("Chachi wakes up from a nap with a sudden burst of energy.");
 
 // Flow Chart - Predefined Process: Function
-scratch(scratchingPost, true, false, 5);
+scratch(scratchingPost, true, false, 5, 3);
 console.log("All of this scratching has given Chachi " + sharpClaws.frontClaws + "claws.");
 console.log("I guess it is time for Chachi to go visit " + characterData.characters[2].characterName +
 	" the local " + characterData.characters[2].characterOccupation + " to get her claws clipped.");
