@@ -9,6 +9,23 @@
 
 // Flow Chart - Internal Storage: Global Variables
 
+var litterbox = {
+	"litterBrand":   "\"Fresh Step\"",
+	"litterLevel": "full",
+	"currentStatus": "clean",
+	//Method: Accessor
+	"checkStatus": function () {
+		console.log("The litterbox is currently " + litterbox.currentStatus + ".");
+	},
+	//Method: Mutators
+	"useLitterbox": function () {
+		litterbox.currentStatus = "dirty"
+	},
+	"cleanLitterbox": function () {
+		litterbox.currentStatus = "clean"
+	}
+};
+
 // Flow Chart - Method: Procedure
 
 var feedCat = function (amountOfFood) { 
@@ -21,20 +38,14 @@ var feedCat = function (amountOfFood) {
 
 // Flow Chart - Method: Function
 var eat = function (piecesOfFood) {
-	var bite = 3,
-		foodBowl;
+	var bite = 3;
 		while (piecesOfFood > 0) {
 		console.log("My cat notices that there are " + piecesOfFood + 
 		" bits of food in her food bowl, so she takes a bite. She can consume " + bite + " food bits each bite.");
 		piecesOfFood = piecesOfFood - bite;
 		};
-	foodBowl = 0;
-	return foodBowl;
+	return 0;
 };
-
-// Flow Chart - Method: Accessor
-
-// Flow Chart - Method: Mutator
 
 // Flow Chart - Internal Storage: Returned Values
 
@@ -47,8 +58,31 @@ console.log("My name is " + characterData.characters[1].characterName + " and I 
 	".");
 
 feedCat(1);
+
 eat(15);
+
 console.log("My cat is no longer hungry and the food bowl now contains " + remainingFood + " pieces of food.");
+
 feedCat(3);
+
+console.log(characterData.characters[1].characterName + " checks to see if the litterbox is clean or dirty.");
+
+// Flow Chart - Method: Accessor
+litterbox.checkStatus();
+
+console.log(characterData.characters[0].characterName + " wakes up and uses the litterbox.");
+
+// Flow Chart - Method: Mutator
+litterbox.useLitterbox();
+
+console.log(characterData.characters[1].characterName + " notices an unpleasant scent and checks the litterbox again.");
+
+// Flow Chart - Method: Accessor
+litterbox.checkStatus();
+
+console.log("Annoyed at the situation " + characterData.characters[1].characterName + " cleans the litterbox.");
+
+// Flow Chart - Method: Mutator
+litterbox.cleanLitterbox();
 
 // Flow Chart - End Terminator
