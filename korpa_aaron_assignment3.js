@@ -37,7 +37,7 @@ var scratchingPost = {
 	surfaces:   ["carpet", "wood", "rope"]
 };
 
-// Flow Chart - Method: Procedure
+// Flow Chart - Predefined Process: Procedure
 
 var feedCat = function (amountOfFood) { 
 	if (amountOfFood >= 2) {
@@ -47,7 +47,7 @@ var feedCat = function (amountOfFood) {
 	}
 };
 
-// Flow Chart - Method: Function
+// Flow Chart - Predefined Process: Function
 var eat = function (piecesOfFood) {
 	var bite = 3;
 		while (piecesOfFood > 0) {
@@ -58,7 +58,7 @@ var eat = function (piecesOfFood) {
 	return 0;
 };
 
-// Flow Chart - Method: Function
+// Flow Chart - Predefined Process: Function
 var sleep = function (isItTired) {
 	if (isItTired === "sleepy") {
 		return tired = true;
@@ -68,7 +68,7 @@ var sleep = function (isItTired) {
 };
 
 
-// Flow Chart - Method: Array Function
+// Flow Chart - Predefined Process: Array Function
 var exercise = function (energyLevel, thingsToDo) {
 	var activities = thingsToDo.length;
 		lowEnergyActivities = thingsToDo;
@@ -81,7 +81,7 @@ var exercise = function (energyLevel, thingsToDo) {
 	return lowEnergyActivities;
 };
 
-// Flow Chart - Method: Function
+// Flow Chart - Predefined Process: Function
 var scratch = function (objectToScratch, isInTheHouse, isAsleep, numberOfEnergy) {
 	var item = objectToScratch;
 		attack = 1;
@@ -154,12 +154,12 @@ console.log("Annoyed at the situation " + characterData.characters[1].characterN
 // Flow Chart - Method: Mutator
 litterbox.cleanLitterbox();
 
-// Flow Chart - Method: Array Function
+// Flow Chart - Predefined Process: Array Function
 exercise(catMotivation, catActivities);
 console.log("Since my cat used all of her motivation she resumes her mellow activities such as" + lowEnergyActivities + ".");
 console.log("Chachi wakes up from a nap with a sudden burst of energy.");
 
-// Flow Chart - Method: Function
+// Flow Chart - Predefined Process: Function
 scratch(scratchingPost, true, false, 5);
 console.log("All of this scratching has given Chachi " + sharpClaws.frontClaws + "claws.");
 console.log("I guess it is time for Chachi to go visit " + characterData.characters[2].characterName +
