@@ -41,7 +41,7 @@ var scratchingPost = {
 
 var feedCat = function (amountOfFood) { 
 	if (amountOfFood >= 2) {
-		console.log("After eating, my cat goes to sleep.");
+		console.log("Now that she is full, my cat goes to sleep.");
 	} else {
 		console.log("When my cat is hungry she will bug me until she gets enough food.");
 	}
@@ -57,6 +57,16 @@ var eat = function (piecesOfFood) {
 		};
 	return 0;
 };
+
+// Flow Chart - Method: Function
+var sleep = function (isItTired) {
+	if (isItTired === "sleepy") {
+		return tired = true;
+	} else {
+		return notTired = "isn't tired";
+	}
+};
+
 
 // Flow Chart - Method: Array Function
 var exercise = function (energyLevel, thingsToDo) {
@@ -102,6 +112,8 @@ var scratch = function (objectToScratch, isInTheHouse, isAsleep, numberOfEnergy)
 var remainingFood = eat();
 var lowEnergyActivities;
 var sharpClaws;
+var tired;
+var notTired;
 
 // Flow Chart - Main code: Outputs
 
@@ -110,10 +122,15 @@ console.log("My name is " + characterData.characters[1].characterName + " and I 
 	".");
 
 feedCat(1);
+sleep("awake");
+console.log("When Chachi is hungry she " + notTired + ".");
 
 eat(15);
 
 console.log("My cat is no longer hungry and the food bowl now contains " + remainingFood + " pieces of food.");
+
+sleep("sleepy");
+console.log("After finishing a meal, it is " + tired + " that Chachi gets a little tired.");
 
 feedCat(3);
 
