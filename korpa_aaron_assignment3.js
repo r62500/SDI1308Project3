@@ -31,6 +31,7 @@ var litterbox = {
 };
 
 var scratchingPost = {
+	name:       "scratching post",
 	hasCarpet:  true,
 	yearsOwned: 5,
 	surfaces:   ["carpet", "wood", "rope"]
@@ -57,7 +58,7 @@ var eat = function (piecesOfFood) {
 	return 0;
 };
 
-// Flow chart - Method: Array Function
+// Flow Chart - Method: Array Function
 var exercise = function (energyLevel, thingsToDo) {
 	var activities = thingsToDo.length;
 		lowEnergyActivities = thingsToDo;
@@ -70,10 +71,37 @@ var exercise = function (energyLevel, thingsToDo) {
 	return lowEnergyActivities;
 };
 
+// Flow Chart - Method: Function
+var scratch = function (objectToScratch, isInTheHouse, isAsleep, numberOfEnergy) {
+	var item = objectToScratch;
+		attack = 1;
+		isWithinRange = isInTheHouse;
+		sleeping = isAsleep;
+		interest = numberOfEnergy;
+		if (isWithinRange === true) {
+			if (sleeping != true) {
+				while (interest > 0) {
+				console.log("Chachi scratches at the " + item.name + " for five seconds.");
+				interest = interest - attack;
+				}
+				return sharpClaws = {
+					frontClaws: "sharp",
+					backClaws: "dull"
+					
+		};
+			} else {
+			console.log("Chachi is too tired to do anything.");
+			}
+		} else {
+		console.log("Chachi would probably scratch " + item + " if it were within her reach.");
+		}
+};	
+
 // Flow Chart - Internal Storage: Returned Values
 
 var remainingFood = eat();
 var lowEnergyActivities;
+var sharpClaws;
 
 // Flow Chart - Main code: Outputs
 
@@ -112,4 +140,12 @@ litterbox.cleanLitterbox();
 // Flow Chart - Method: Array Function
 exercise(catMotivation, catActivities);
 console.log("Since my cat used all of her motivation she resumes her mellow activities such as" + lowEnergyActivities + ".");
+console.log("Chachi wakes up from a nap with a sudden burst of energy.");
+
+// Flow Chart - Method: Function
+scratch(scratchingPost, true, false, 5);
+console.log("All of this scratching has given Chachi " + sharpClaws.frontClaws + "claws.");
+console.log("I guess it is time for Chachi to go visit " + characterData.characters[2].characterName +
+	" the local " + characterData.characters[2].characterOccupation + ".");
+
 // Flow Chart - End Terminator
