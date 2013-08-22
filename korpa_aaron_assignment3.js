@@ -10,8 +10,11 @@
 // Flow Chart - Internal Storage: Global Variables
 
 var litterbox = {
-	"litterBrand":   "\"Fresh Step\"",
-	"litterLevel": "full",
+	"litter":   {
+		brand:        "\"Fresh Step\""
+		amountPerBox: "14 Pounds"
+		price:        "10 Dollars"
+	},
 	"currentStatus": "clean",
 	//Method: Accessor
 	"checkStatus": function () {
@@ -24,6 +27,12 @@ var litterbox = {
 	"cleanLitterbox": function () {
 		litterbox.currentStatus = "clean"
 	}
+};
+
+var scratchingPost = {
+	hasCarpet: true,
+	yearsOwned: 5,
+	surfaces: ["carpet", "wood", "rope"]
 };
 
 // Flow Chart - Method: Procedure
