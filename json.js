@@ -6,21 +6,21 @@ var characterData = {
 	
 		{
 			"characterName":       "Chachi",
-			"characterType":       "Cat",
+			"characterType":       "cat",
 			"characterAge":        "13",
-			"characterOccupation": "Housecat"
+			"characterOccupation": "housecat"
 		},
 		{
 			"characterName":       "Aaron",
-			"characterType":       "Human",
+			"characterType":       "human",
 			"characterAge":        "31",
-			"characterOccupation": "Audio Engineer and College Student"
+			"characterOccupation": "audio engineer and college student"
 		},
 		{
 			"characterName":       "Carolyn Morrill",
-			"characterType":       "Human",
-			"characterAge":        "Unknown",
-			"characterOccupation": "Veterinarian"
+			"characterType":       "human",
+			"characterAge":        "unknown",
+			"characterOccupation": "veterinarian"
 		}
 	
 	]
