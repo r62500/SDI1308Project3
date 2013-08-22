@@ -8,11 +8,12 @@
 // Flow Chart - Start Terminator
 
 // Flow Chart - Internal Storage: Global Variables
-
+var catMotivation = 2;
+var catActivities = [" eating", " sleeping", " scratching the scratching post", " using the litter box",  " staring at the wall"];
 var litterbox = {
 	"litter":   {
-		brand:        "\"Fresh Step\""
-		amountPerBox: "14 Pounds"
+		brand:        "\"Fresh Step\"",
+		amountPerBox: "14 Pounds",
 		price:        "10 Dollars"
 	},
 	"currentStatus": "clean",
@@ -30,9 +31,9 @@ var litterbox = {
 };
 
 var scratchingPost = {
-	hasCarpet: true,
+	hasCarpet:  true,
 	yearsOwned: 5,
-	surfaces: ["carpet", "wood", "rope"]
+	surfaces:   ["carpet", "wood", "rope"]
 };
 
 // Flow Chart - Method: Procedure
@@ -56,9 +57,23 @@ var eat = function (piecesOfFood) {
 	return 0;
 };
 
+// Flow chart - Method: Array Function
+var exercise = function (energyLevel, thingsToDo) {
+	var activities = thingsToDo.length;
+		lowEnergyActivities = thingsToDo;
+	for (var i = energyLevel; i < activities; i = i + 1) {
+		console.log("My cat has some motivation so she is going to begin" + thingsToDo[i] + ".");
+	};
+	lowEnergyActivities.pop();
+	lowEnergyActivities.pop();
+	lowEnergyActivities.pop();	
+	return lowEnergyActivities;
+};
+
 // Flow Chart - Internal Storage: Returned Values
 
 var remainingFood = eat();
+var lowEnergyActivities;
 
 // Flow Chart - Main code: Outputs
 
@@ -94,4 +109,7 @@ console.log("Annoyed at the situation " + characterData.characters[1].characterN
 // Flow Chart - Method: Mutator
 litterbox.cleanLitterbox();
 
+// Flow Chart - Method: Array Function
+exercise(catMotivation, catActivities);
+console.log("Since my cat used all of her motivation she resumes her mellow activities such as" + lowEnergyActivities + ".");
 // Flow Chart - End Terminator
