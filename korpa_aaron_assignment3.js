@@ -163,6 +163,6 @@ console.log("Chachi wakes up from a nap with a sudden burst of energy.");
 scratch(scratchingPost, true, false, 5);
 console.log("All of this scratching has given Chachi " + sharpClaws.frontClaws + "claws.");
 console.log("I guess it is time for Chachi to go visit " + characterData.characters[2].characterName +
-	" the local " + characterData.characters[2].characterOccupation + ".");
+	" the local " + characterData.characters[2].characterOccupation + " to get her claws clipped.");
 
 // Flow Chart - End Terminator
